@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login | UiTM ISM Notes Portal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #a9caf3, #811bb9);
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    .login-section {
+      background: #fff;
+      color: #333;
+      border-radius: 15px;
+      box-shadow: 0 0 30px rgba(0,0,0,0.2);
+      overflow: hidden;
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 900px;
+      width: 100%;
+      margin: 40px auto;
+      flex: 1 0 auto;
+    }
+    .login-form {
+      flex: 1 1 400px;
+      padding: 40px;
+    }
+    .login-image {
+      flex: 1 1 400px;
+      background: url('IMAGE/uitm-universiti-teknologi-mara-logo.png') no-repeat center;
+      background-size: contain;
+      background-color: #ede7f6;
+    }
+    .form-control {
+      border-radius: 10px;
+    }
+    .btn-primary {
+      background-color: #512da8;
+      border: none;
+      border-radius: 10px;
+    }
+    .btn-primary:hover {
+      background-color: #311b92;
+    }
+    .portal-info {
+      margin-top: 20px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+    footer {
+      background-color: #00274d;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.95rem;
+      letter-spacing: 0.5px;
+      margin-top: auto;
+    }
+    @media (max-width: 768px) {
+      .login-section {
+        flex-direction: column;
+        margin: 24px 8px;
+      }
+      .login-image {
+        height: 180px;
+        background-size: 80%;
+      }
+      .login-form {
+        padding: 28px 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-section">
+    <!-- Left Section: Login Form -->
+    <div class="login-form">
+      <h2 class="mb-4 text-center">UiTM ISM Notes Portal</h2>
+      <p class="text-muted text-center">Access and share academic notes for Information System Management.</p>
+      
+      <!-- ✅ No action/method -->
+      <form onsubmit="return validateLogin()">
+        <div class="mb-3">
+          <label for="studentId" class="form-label">Student ID</label>
+          <input type="text" class="form-control" id="studentId" placeholder="e.g. 2022167890" required>
+        </div>
+        <div class="mb-3">
+          <label for="password" class="form-label">Password</label>
+          <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
+        <div class="text-center mt-3">
+          <small><a href="https://istudent.uitm.edu.my" class="text-decoration-none">Forgot Password?</a></small>
+        </div>
+      </form>
+
+      <!-- Extra Info Section -->
+      <div class="portal-info">
+        <hr />
+        <h6>Why use this portal?</h6>
+        <ul>
+          <li>📚 Access curated ISM academic notes</li>
+          <li>🔍 Search by course code or semester</li>
+          <li>📥 Download PDF files instantly</li>
+          <li>🧠 Study smarter and improve your grades</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Section: Logo or Visual -->
+    <div class="login-image d-none d-md-block"></div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 UiTM ISM Library System | Created for IMS566 Web Project </p>
+  </footer>
+
+  <script>
+    function validateLogin() {
+      const studentId = document.getElementById('studentId').value.trim();
+      const password = document.getElementById('password').value.trim();
+
+      if (studentId === '' || password === '') {
+        alert('Please fill in all fields!');
+        return false;
+      }
+
+      // Simulate login success
+      sessionStorage.setItem("isLoggedIn", "true");
+      window.location.href = "dashboard.html";
+      return false; // prevent default form submission
+    }
+
+    // Optional: redirect if already logged in
+    if (sessionStorage.getItem("isLoggedIn") === "true") {
+      window.location.href = "dashboard.html";
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
