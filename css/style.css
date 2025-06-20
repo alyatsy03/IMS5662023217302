@@ -1,0 +1,112 @@
+/* style.css */
+
+/* GENERAL STYLES */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #343a40;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* NAVBAR */
+.navbar-custom {
+  background-color: #6a1b9a;
+}
+
+.navbar-brand img {
+  margin-right: 10px;
+}
+
+.navbar-nav .nav-link {
+  color: #fff;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #ffd700;
+}
+
+/* BUTTONS */
+.btn-primary {
+  background-color: #6a1b9a;
+  border-color: #6a1b9a;
+}
+
+.btn-primary:hover {
+  background-color: #4a0c76;
+  border-color: #4a0c76;
+}
+
+.btn-outline-primary {
+  border-color: #6a1b9a;
+  color: #6a1b9a;
+}
+
+.btn-outline-primary:hover {
+  background-color: #6a1b9a;
+  color: #fff;
+}
+
+/* CARDS */
+.card-title {
+  font-weight: bold;
+  color: #6a1b9a;
+}
+
+.feature-card {
+  border-left: 5px solid #6a1b9a;
+  transition: all 0.3s ease-in-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.news-card {
+  background: #fff;
+  padding: 15px 20px;
+  border-left: 4px solid #6a1b9a;
+  transition: background 0.3s ease-in-out;
+}
+
+.news-card:hover {
+  background: #f0e6fa;
+}
+
+/* ACCORDIONS */
+.accordion-button:not(.collapsed) {
+  background-color: #6a1b9a;
+  color: #fff;
+}
+
+/* LOGIN CARD */
+.login-card {
+  border-left: 5px solid #6a1b9a;
+  background: #ffffff;
+  border-radius: 8px;
+}
+
+/* TABLES */
+.table-hover tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+/* FOOTER */
+footer {
+  background-color: #343a40;
+  color: #ffffff;
+  padding: 10px;
+  text-align: center;
+  margin-top: 50px;
+}
+

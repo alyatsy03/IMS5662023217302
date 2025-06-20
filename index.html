@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>UiTM ISM Notes Platform</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #d6e2f0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+    }
+    .navbar-custom {
+      background-color: #00274d;
+    }
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+    }
+    .hero {
+      background-color: white;
+      padding: 3rem 2rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-text {
+      max-width: 600px;
+    }
+    .hero-text h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #00274d;
+    }
+    .hero-text p {
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 2rem;
+    }
+    .btn-pink, .btn-outline-dark {
+      font-weight: 600;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 25px;
+    }
+    .btn-pink {
+      background-color: #e6007e;
+      color: white;
+      border: none;
+    }
+    .circle-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 5px solid #ccc;
+      margin: 1rem;
+    }
+    .circle-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      background-color: rgb(225, 237, 255);
+    }
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      transition: 0.3s ease;
+    }
+    footer {
+      background-color: #00274d;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+
+  
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-custom px-3 fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand text-white" href="#">UiTM ISM Notes</a>
+    <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-white" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+  <!-- Hero Section -->
+<section class="hero">
+  <div class="hero-text text-center text-md-start">
+    <p class="text-muted small mb-1">UiTM > Faculty of Information Management > ISM Notes</p>
+    <h1>Information System Management Notes Sharing System</h1>
+    <p>Connect ISM students with valuable academic notes in a single, organized platform tailored to your course.</p>
+      <a href="login.html" class="btn btn-outline-dark">Register or Log In</a>
+    </div>
+  </div>
+  
+  <!-- Circle Image -->
+  <div class="circle-img">
+    <img src="IMAGE/uitm-universiti-teknologi-mara-logo.png" alt="UiTM Logo">
+  </div>
+</section>
+
+
+  <!-- Features -->
+  <section class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="card feature-card text-center p-4 shadow-sm h-100">
+          <div class="fs-1 mb-3">📚</div>
+          <h5>Single Course Focus</h5>
+          <p>All materials are specific to Information System Management for easier access and revision.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card feature-card text-center p-4 shadow-sm h-100">
+          <div class="fs-1 mb-3">📄</div>
+          <h5>PDF Format</h5>
+          <p>View and download all past year papers in clean, accessible PDF format.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="card feature-card text-center p-4 shadow-sm h-100">
+          <div class="fs-1 mb-3">🔐</div>
+          <h5>UiTM Student Login</h5>
+          <p>Only verified Information System Management students can access the content.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Announcements -->
+  <section class="container my-5">
+    <h3 class="text-center mb-4">📌 Latest Announcements</h3>
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h6>🗓️ New Upload: June 2025</h6>
+          <p>Recent past year paper for IMS555 (2024/2025) has been added.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h6>📥 Contribution Guidelines</h6>
+          <p>Students can now submit their scanned papers via the portal for review and upload.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="p-3 shadow-sm bg-white rounded">
+          <h6>📢 Maintenance Notice</h6>
+          <p>The library system will undergo updates this weekend. Access may be limited.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 UiTM ISM Library System | Created for IMS566 Web Project</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
